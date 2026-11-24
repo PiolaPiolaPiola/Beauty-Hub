@@ -1,0 +1,141 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Servicios de barbería y peluquería</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+</head>
+<body>
+
+    <header>
+        <div class="wrap">
+            <h1>Corte, barba y color en un solo lugar</h1>
+        </div>
+        <div class="franja wrap" aria-hidden="true" style="max-width:none">
+            <span style="background:var(--verde)"></span>
+            <span style="background:var(--bronce)"></span>
+            <span style="background:var(--terracota)"></span>
+            <span style="background:var(--arena)"></span>
+            <span style="background:var(--rosa)"></span>
+        </div>
+    </header>
+
+    <nav class="filtros" aria-label="Filtrar servicios">
+        <div class="wrap">
+            <button type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+            <button type="button" data-filtro="barberia" aria-pressed="false">Barbería</button>
+            <button type="button" data-filtro="peluqueria" aria-pressed="false">Peluquería</button>
+            <button type="button" data-filtro="combos" aria-pressed="false">Combos</button>
+            <div class="sesion">
+                @await Html.PartialAsync("_NavSesion")
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="barberia" id="barberia" data-grupo="barberia" aria-labelledby="t-barberia">
+            <div class="wrap">
+                <div class="cabecera">
+                    <h2 id="t-barberia">Barbería</h2>
+                    <p class="nota">Cortes clásicos y modernos, y cuidado de barba con toalla caliente.</p>
+                </div>
+                <ul class="lista dos" id="lista-barberia"></ul>
+            </div>
+        </section>
+
+        <section class="peluqueria" id="peluqueria" data-grupo="peluqueria" aria-labelledby="t-peluqueria">
+            <div class="wrap">
+                <div class="cabecera">
+                    <h2 id="t-peluqueria">Peluquería</h2>
+                    <p class="nota">Corte, color y tratamientos para todo tipo de cabello. El precio de color varía según el largo.</p>
+                </div>
+                <ul class="lista dos" id="lista-peluqueria"></ul>
+            </div>
+        </section>
+
+        <section class="combos" id="combos" data-grupo="combos" aria-labelledby="t-combos">
+            <div class="wrap">
+                <div class="cabecera">
+                    <h2 id="t-combos">Combos</h2>
+                    <p class="nota">Dos servicios en la misma visita, con precio especial.</p>
+                </div>
+                <ul class="lista" id="lista-combos"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <div>
+                <h2>Horario</h2>
+                <dl>
+                    <dt>Lunes a viernes</dt>
+                    <dd>9:00 a. m. – 7:00 p. m.</dd>
+                    <dt>Sábados</dt>
+                    <dd>9:00 a. m. – 6:00 p. m.</dd>
+                    <dt>Domingos</dt>
+                    <dd>Cerrado</dd>
+                </dl>
+            </div>
+            <div>
+                <h2>Reserva tu cita</h2>
+                <p>Escríbenos por WhatsApp y te confirmamos el turno el mismo día.</p>
+                <a class="reserva" href="#">Reservar por WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+            const servicios = {
+              barberia: [
+                { nombre: "Corte clásico", desc: "Tijera y máquina, con acabado a navaja en el contorno.", min: 40, precio: 25000 },
+                { nombre: "Degradado (fade)", desc: "Bajo, medio o alto, con diseño de líneas si lo deseas.", min: 50, precio: 30000, popular: true },
+                { nombre: "Arreglo de barba", desc: "Perfilado, recorte y toalla caliente.", min: 30, precio: 20000 },
+                { nombre: "Afeitado tradicional", desc: "Navaja, espuma caliente y bálsamo después del afeitado.", min: 35, precio: 25000 },
+                { nombre: "Corte infantil", desc: "Para menores de 12 años.", min: 30, precio: 20000 },
+                { nombre: "Cejas y contorno", desc: "Limpieza con navaja o hilo.", min: 15, precio: 8000 }
+              ],
+              peluqueria: [
+                { nombre: "Corte y peinado", desc: "Lavado, corte según tu tipo de cabello y secado.", min: 60, precio: 45000 },
+                { nombre: "Color completo", desc: "Aplicación en todo el cabello con productos sin amoníaco.", min: 120, precio: 120000 },
+                { nombre: "Mechas y balayage", desc: "Aclarado a mano alzada, con matizado incluido.", min: 180, precio: 220000, popular: true },
+                { nombre: "Tratamiento de keratina", desc: "Reduce el frizz y deja el cabello suave por semanas.", min: 150, precio: 180000 },
+                { nombre: "Hidratación profunda", desc: "Mascarilla nutritiva con masaje de cuero cabelludo.", min: 45, precio: 55000 },
+                { nombre: "Peinado para evento", desc: "Recogidos, ondas o trenzas. Pide tu cita con anticipación.", min: 60, precio: 70000 }
+              ],
+              combos: [
+                { nombre: "Corte + barba", desc: "Degradado o corte clásico con arreglo de barba.", min: 75, precio: 42000 },
+                { nombre: "Corte + color", desc: "Corte y peinado con color completo.", min: 170, precio: 150000 },
+                { nombre: "Día de novia", desc: "Peinado, hidratación previa y retoque de color.", min: 210, precio: 240000 }
+              ]
+            };
+
+            const pesos = n => "$" + n.toLocaleString("es-CO");
+
+            Object.entries(servicios).forEach(([grupo, items]) => {
+              const ul = document.getElementById("lista-" + grupo);
+              ul.innerHTML = items.map(s => `
+                <li class="servicio">
+                  <h3>${s.nombre}${s.popular ? '<span class="etiqueta">Más pedido</span>' : ""}</h3>
+                  <span class="precio">${pesos(s.precio)}</span>
+                  <p>${s.desc}</p>
+                  <span class="duracion">${s.min} min</span>
+                </li>`).join("");
+            });
+
+            const botones = document.querySelectorAll(".filtros button[data-filtro]");
+            const grupos = document.querySelectorAll("main section");
+            botones.forEach(b => b.addEventListener("click", () => {
+              const f = b.dataset.filtro;
+              botones.forEach(x => x.setAttribute("aria-pressed", x === b));
+              grupos.forEach(g => g.classList.toggle("oculto", f !== "todos" && g.dataset.grupo !== f));
+            }));
+    </script>
+</body>
+</html>

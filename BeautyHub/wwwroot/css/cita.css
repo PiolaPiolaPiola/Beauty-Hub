@@ -1,0 +1,160 @@
+/* Formulario "Registrar cita" (usa las variables de color de index.css) */
+
+.cita {
+    max-width: 640px;
+}
+
+.form-cita {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.campo {
+    display: grid;
+    gap: .4rem;
+    border: none;
+}
+
+    .campo label,
+    .campo legend {
+        font-weight: 600;
+        color: var(--verde);
+    }
+
+    .campo legend {
+        margin-bottom: .4rem;
+    }
+
+    .campo small {
+        font-weight: 400;
+        opacity: .75;
+    }
+
+    .campo select,
+    .campo input[type="date"],
+    .campo textarea {
+        width: 100%;
+        font: inherit;
+        padding: .7rem .9rem;
+        border: 2px solid var(--carbon);
+        border-radius: 10px;
+        background: #fff;
+        color: var(--carbon);
+    }
+
+    .campo textarea {
+        resize: vertical;
+    }
+
+.detalle {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--terracota);
+}
+
+.ayuda {
+    font-size: .85rem;
+    opacity: .75;
+}
+
+/* Horas como "fichas" seleccionables */
+.horas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: .5rem;
+}
+
+.hora {
+    position: relative;
+    cursor: pointer;
+}
+
+    /* El radio queda oculto visualmente, pero sigue siendo accesible con teclado */
+    .hora input {
+        position: absolute;
+        opacity: 0;
+        inset: 0;
+        cursor: pointer;
+    }
+
+    .hora span {
+        display: block;
+        text-align: center;
+        padding: .55rem .4rem;
+        border: 2px solid var(--carbon);
+        border-radius: 999px;
+        font-weight: 600;
+        color: var(--carbon);
+        background: transparent;
+        font-family: var(--sans);
+    }
+
+    .hora input:checked + span {
+        background: var(--verde);
+        border-color: var(--verde);
+        color: var(--arena);
+    }
+
+    .hora input:focus-visible + span {
+        outline: 3px solid var(--terracota);
+        outline-offset: 3px;
+    }
+
+    .hora:hover span {
+        border-color: var(--terracota);
+    }
+
+/* Mensajes */
+.error {
+    color: #a3261b;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+    .error ul {
+        list-style: none;
+    }
+
+.validation-summary-valid {
+    display: none;
+}
+
+.aviso-ok {
+    display: grid;
+    gap: .2rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    background: var(--verde);
+    color: var(--arena);
+}
+
+    .aviso-ok strong {
+        font-family: var(--serif);
+        font-size: 1.2rem;
+    }
+
+/* Botones */
+.acciones {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+    .acciones .reserva {
+        margin-top: 0;
+        border: none;
+        cursor: pointer;
+    }
+
+.volver {
+    color: var(--verde);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+    .volver:hover {
+        text-decoration: underline;
+    }

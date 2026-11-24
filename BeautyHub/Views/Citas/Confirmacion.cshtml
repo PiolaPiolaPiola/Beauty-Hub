@@ -1,0 +1,38 @@
+@model Cita
+@{
+    Layout = "_PaginaCita";
+    ViewData["Titulo"] = "Confirmación de cita";
+    ViewData["Subtitulo"] = "Este es el resumen de tu reserva.";
+    var fecha = Model.Fecha.ToString("dddd d 'de' MMMM 'de' yyyy", new System.Globalization.CultureInfo("es-CO"));
+    var hora = Model.Hora.ToString("h:mm tt", new System.Globalization.CultureInfo("es-CO"));
+}
+
+<section class="resumen" aria-labelledby="resumen-titulo">
+    <h2 id="resumen-titulo">Resumen de tu reserva</h2>
+    <dl class="resumen-lista">
+        <dt>Servicio</dt>
+        <dd>@Model.Servicio?.Nombre</dd>
+        <dt>Profesional</dt>
+        <dd>@(Model.Profesional?.NombreCompleto ?? "Por asignar")</dd>
+        <dt>Fecha</dt>
+        <dd>@fecha</dd>
+        <dt>Hora</dt>
+        <dd>@hora</dd>
+        <dt>Duración</dt>
+        <dd>@Model.Servicio?.DuracionMinutos min</dd>
+        <dt>Precio</dt>
+        <dd>@(Model.Servicio is null ? "" : Identidad.FormatearPrecio(Model.Servicio.Precio))</dd>
+        <dt>Estado</dt>
+        <dd><span class="estado estado-@Model.Estado.ToString().ToLowerInvariant()">@Model.Estado</span></dd>
+        @if (!string.IsNullOrWhiteSpace(Model.Observaciones))
+        {
+            <dt>Observaciones</dt>
+            <dd>@Model.Observaciones</dd>
+        }
+    </dl>
+
+    <div class="acciones">
+        <a class="reserva" asp-controller="Citas" asp-action="Mis">Ver mis citas</a>
+        <a class="volver" asp-controller="Citas" asp-action="Registrar">Registrar otra cita</a>
+    </div>
+</section>

@@ -1,0 +1,99 @@
+@model List<Cita>
+@{
+    Layout = "_PaginaCita";
+    var profesional = (Profesional)ViewData["Profesional"]!;
+    var dia = (DateOnly)ViewData["Dia"]!;
+    ViewData["Titulo"] = $"Hola, {profesional.Nombres}";
+    ViewData["Subtitulo"] = profesional.Especialidad;
+    ViewData["ClaseContenedor"] = "cita-ancha";
+    var cultura = new System.Globalization.CultureInfo("es-CO");
+}
+
+<section class="perfil" aria-labelledby="perfil-titulo">
+    <h2 id="perfil-titulo">Mi perfil</h2>
+    <dl class="resumen-lista">
+        <dt>Nombre</dt>
+        <dd>@profesional.NombreCompleto</dd>
+        <dt>Especialidad</dt>
+        <dd>@(profesional.Especialidad ?? "—")</dd>
+        <dt>Teléfono</dt>
+        <dd>@profesional.Telefono</dd>
+        <dt>Correo</dt>
+        <dd>@(profesional.Correo ?? "—")</dd>
+    </dl>
+</section>
+
+<section aria-labelledby="agenda-titulo">
+    <div class="agenda-cabecera">
+        <h2 id="agenda-titulo">Agenda del @dia.ToString("dd/MM/yyyy", cultura)</h2>
+        <form asp-controller="Profesional" asp-action="Perfil" method="get" class="selector-dia">
+            <label for="fecha">Ver otro día</label>
+            <input type="date" id="fecha" name="fecha" value="@dia.ToString("yyyy-MM-dd")" />
+            <button type="submit" class="volver">Ver</button>
+        </form>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <p class="ayuda">No tienes citas para este día.</p>
+    }
+    else
+    {
+        <div class="tabla-contenedor">
+            <table class="tabla-citas">
+                <thead>
+                    <tr>
+                        <th scope="col">Hora</th>
+                        <th scope="col">Cliente</th>
+                        <th scope="col">Servicio</th>
+                        <th scope="col">Observaciones</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col"><span class="sr-only">Acciones</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var cita in Model)
+                    {
+                        <tr>
+                            <td>@cita.Hora.ToString("h:mm tt", cultura)</td>
+                            <td>@(cita.Cliente is null ? "—" : $"{cita.Cliente.Nombres} {cita.Cliente.Apellidos} · {cita.Cliente.Telefono}")</td>
+                            <td>@cita.Servicio?.Nombre</td>
+                            <td>@cita.Observaciones</td>
+                            <td><span class="estado estado-@cita.Estado.ToString().ToLowerInvariant()">@cita.Estado</span></td>
+                            <td class="acciones-tabla">
+                                @if (CitaService.TransicionValida(cita.Estado, EstadoCita.Confirmada))
+                                {
+                                    <form asp-controller="Profesional" asp-action="CambiarEstado" method="post">
+                                        <input type="hidden" name="id" value="@cita.Id" />
+                                        <input type="hidden" name="nuevoEstado" value="Confirmada" />
+                                        <input type="hidden" name="fecha" value="@dia.ToString("yyyy-MM-dd")" />
+                                        <button type="submit" class="reserva-pequena">Confirmar</button>
+                                    </form>
+                                }
+                                @if (CitaService.TransicionValida(cita.Estado, EstadoCita.Atendida))
+                                {
+                                    <form asp-controller="Profesional" asp-action="CambiarEstado" method="post">
+                                        <input type="hidden" name="id" value="@cita.Id" />
+                                        <input type="hidden" name="nuevoEstado" value="Atendida" />
+                                        <input type="hidden" name="fecha" value="@dia.ToString("yyyy-MM-dd")" />
+                                        <button type="submit" class="reserva-pequena">Marcar atendida</button>
+                                    </form>
+                                }
+                                @if (CitaService.TransicionValida(cita.Estado, EstadoCita.Cancelada))
+                                {
+                                    <form asp-controller="Profesional" asp-action="CambiarEstado" method="post"
+                                          onsubmit="return confirm('¿Cancelar esta cita?');">
+                                        <input type="hidden" name="id" value="@cita.Id" />
+                                        <input type="hidden" name="nuevoEstado" value="Cancelada" />
+                                        <input type="hidden" name="fecha" value="@dia.ToString("yyyy-MM-dd")" />
+                                        <button type="submit" class="btn-peligro">Cancelar</button>
+                                    </form>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</section>

@@ -1,0 +1,43 @@
+﻿@model LoginViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login - Beauty Hub</title>
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+</head>
+<body>
+
+    <div class="login-card">
+        <h1 style="text-align: center; color: #eae2d5;">Beauty Hub Admin</h1>
+        <h2>Iniciar Sesión</h2>
+
+        <form asp-controller="Home" asp-action="Login" method="post">
+            <input type="hidden" asp-for="ReturnUrl" />
+
+            <div asp-validation-summary="ModelOnly" class="message error"></div>
+
+            <div class="input-group">
+                <label asp-for="Usuario">Usuario:</label>
+                <input asp-for="Usuario" autocomplete="username" autofocus />
+                <span asp-validation-for="Usuario" class="field-error"></span>
+            </div>
+            <div class="input-group">
+                <label asp-for="Contrasena">Contraseña:</label>
+                <input asp-for="Contrasena" autocomplete="current-password" />
+                <span asp-validation-for="Contrasena" class="field-error"></span>
+            </div>
+            <button type="submit">Ingresar</button>
+        </form>
+
+        <p class="volver-cuenta">¿No tienes cuenta? <a asp-controller="Cuenta" asp-action="Registro">Crear cuenta</a></p>
+
+        <a class="volver" asp-controller="Home" asp-action="Index">← Volver a servicios</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+@model RegistrarCitaViewModel
+@{
+    Layout = "_PaginaCita";
+    ViewData["Titulo"] = "Registrar cita";
+    ViewData["Subtitulo"] = $"Hola, {User.Identity?.Name}. Elige el profesional, el servicio, el día y la hora.";
+    ViewData["Accion"] = "Registrar";
+}
+
+<partial name="_FormCita" model="Model" />

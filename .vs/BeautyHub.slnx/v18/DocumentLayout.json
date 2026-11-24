@@ -1,0 +1,332 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\PioDevs\\BeautyHub\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\controllers\\citascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\controllers\\citascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\views\\citas\\registrar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\views\\citas\\registrar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\models\\servicioopcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\models\\servicioopcion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\models\\servicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\models\\servicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\models\\registrarcitaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\models\\registrarcitaviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\models\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\models\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\data\\beautyhubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\data\\beautyhubcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\wwwroot\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\wwwroot\\css\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\wwwroot\\css\\index.css||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\wwwroot\\css\\index.css||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|c:\\piodevs\\beautyhub\\beautyhub\\beautyhub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EBC31A25-2FA0-EDE1-010D-DD2E550EC39F}|BeautyHub\\BeautyHub.csproj|solutionrelative:beautyhub\\beautyhub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 18,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\wwwroot\\css\\index.css",
+              "RelativeDocumentMoniker": "BeautyHub\\wwwroot\\css\\index.css",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\wwwroot\\css\\index.css",
+              "RelativeToolTip": "BeautyHub\\wwwroot\\css\\index.css",
+              "ViewState": "AgIAABoBAAAAAAAAAAAAADMBAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-11-10T16:15:31.209Z",
+              "IsPinned": true,
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServicioOpcion.cs",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Models\\ServicioOpcion.cs",
+              "RelativeDocumentMoniker": "BeautyHub\\Models\\ServicioOpcion.cs",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Models\\ServicioOpcion.cs",
+              "RelativeToolTip": "BeautyHub\\Models\\ServicioOpcion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T18:08:26.708Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RegistrarCitaViewModel.cs",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Models\\RegistrarCitaViewModel.cs",
+              "RelativeDocumentMoniker": "BeautyHub\\Models\\RegistrarCitaViewModel.cs",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Models\\RegistrarCitaViewModel.cs",
+              "RelativeToolTip": "BeautyHub\\Models\\RegistrarCitaViewModel.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwBEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T18:00:57.026Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BeautyHubContext.cs",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Data\\BeautyHubContext.cs",
+              "RelativeDocumentMoniker": "BeautyHub\\Data\\BeautyHubContext.cs",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Data\\BeautyHubContext.cs",
+              "RelativeToolTip": "BeautyHub\\Data\\BeautyHubContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T17:45:48.562Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Program.cs",
+              "RelativeDocumentMoniker": "BeautyHub\\Program.cs",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Program.cs",
+              "RelativeToolTip": "BeautyHub\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T17:03:22.553Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Cita.cs",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Models\\Cita.cs",
+              "RelativeDocumentMoniker": "BeautyHub\\Models\\Cita.cs",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Models\\Cita.cs",
+              "RelativeToolTip": "BeautyHub\\Models\\Cita.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T16:49:09.606Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "BeautyHub\\Models\\Cliente.cs",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Models\\Cliente.cs",
+              "RelativeToolTip": "BeautyHub\\Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T16:49:02.605Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "BeautyHub\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "BeautyHub\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T16:49:00.21Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Servicio.cs",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Models\\Servicio.cs",
+              "RelativeDocumentMoniker": "BeautyHub\\Models\\Servicio.cs",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Models\\Servicio.cs",
+              "RelativeToolTip": "BeautyHub\\Models\\Servicio.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAA/wAcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T16:48:47.951Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Models\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "BeautyHub\\Models\\LoginViewModel.cs",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Models\\LoginViewModel.cs",
+              "RelativeToolTip": "BeautyHub\\Models\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T16:48:46.731Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Registrar.cshtml",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Views\\Citas\\Registrar.cshtml",
+              "RelativeDocumentMoniker": "BeautyHub\\Views\\Citas\\Registrar.cshtml",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Views\\Citas\\Registrar.cshtml",
+              "RelativeToolTip": "BeautyHub\\Views\\Citas\\Registrar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHYAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-10T16:40:25.972Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CitasController.cs",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Controllers\\CitasController.cs",
+              "RelativeDocumentMoniker": "BeautyHub\\Controllers\\CitasController.cs",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Controllers\\CitasController.cs",
+              "RelativeToolTip": "BeautyHub\\Controllers\\CitasController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-10T16:39:34.556Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\wwwroot\\css\\index.css",
+              "RelativeDocumentMoniker": "BeautyHub\\wwwroot\\css\\index.css",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\wwwroot\\css\\index.css",
+              "RelativeToolTip": "BeautyHub\\wwwroot\\css\\index.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-11-10T16:17:47.248Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "login.css",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\wwwroot\\css\\login.css",
+              "RelativeDocumentMoniker": "BeautyHub\\wwwroot\\css\\login.css",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\wwwroot\\css\\login.css",
+              "RelativeToolTip": "BeautyHub\\wwwroot\\css\\login.css",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAwCwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-11-10T16:17:54.913Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "BeautyHub\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "BeautyHub\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAAAJMAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-10T16:16:40.438Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BeautyHub.csproj",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\BeautyHub.csproj",
+              "RelativeDocumentMoniker": "BeautyHub\\BeautyHub.csproj",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\BeautyHub.csproj",
+              "RelativeToolTip": "BeautyHub\\BeautyHub.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-11-10T16:14:26.167Z",
+              "OwnerCaption": "BeautyHub.csproj"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "BeautyHub\\Views\\Home\\Login.cshtml",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "BeautyHub\\Views\\Home\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-10T16:00:42.907Z",
+              "OwnerCaption": "%2"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "BeautyHub\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\PioDevs\\BeautyHub\\BeautyHub\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "BeautyHub\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-09T02:56:56.27Z",
+              "EditorCaption": "",
+              "OwnerCaption": "%2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

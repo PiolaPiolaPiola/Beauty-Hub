@@ -1,0 +1,21 @@
+@if (User.Identity?.IsAuthenticated == true)
+{
+    @if (User.IsInRole(Roles.Cliente))
+    {
+        <a class="btn-login" asp-controller="Citas" asp-action="Registrar">Registrar cita</a>
+        <a class="btn-login" asp-controller="Citas" asp-action="Mis">Mis citas</a>
+    }
+    else if (User.IsInRole(Roles.Profesional))
+    {
+        <a class="btn-login" asp-controller="Profesional" asp-action="Perfil">Mi agenda</a>
+    }
+
+    <form asp-controller="Home" asp-action="Logout" method="post">
+        <button type="submit" class="btn-salir">Cerrar sesión</button>
+    </form>
+}
+else
+{
+    <a class="btn-login" asp-controller="Home" asp-action="Login">Iniciar sesión</a>
+    <a class="btn-login" asp-controller="Cuenta" asp-action="Registro">Crear cuenta</a>
+}

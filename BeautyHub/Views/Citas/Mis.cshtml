@@ -1,0 +1,59 @@
+@model List<Cita>
+@{
+    Layout = "_PaginaCita";
+    ViewData["Titulo"] = "Mis citas";
+    ViewData["Subtitulo"] = "Consulta, modifica o cancela tus reservas.";
+    ViewData["ClaseContenedor"] = "cita-ancha";
+    var ahora = (DateTime)ViewData["Ahora"]!;
+    var cultura = new System.Globalization.CultureInfo("es-CO");
+}
+
+@if (!Model.Any())
+{
+    <p class="ayuda">Aún no tienes citas registradas.</p>
+    <a class="reserva" asp-controller="Citas" asp-action="Registrar">Registrar una cita</a>
+}
+else
+{
+    <div class="tabla-contenedor">
+        <table class="tabla-citas">
+            <thead>
+                <tr>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Servicio</th>
+                    <th scope="col">Profesional</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col"><span class="sr-only">Acciones</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cita in Model)
+                {
+                    <tr>
+                        <td>@cita.Fecha.ToString("dd/MM/yyyy")</td>
+                        <td>@cita.Hora.ToString("h:mm tt", cultura)</td>
+                        <td>@cita.Servicio?.Nombre</td>
+                        <td>@(cita.Profesional?.NombreCompleto ?? "Por asignar")</td>
+                        <td><span class="estado estado-@cita.Estado.ToString().ToLowerInvariant()">@cita.Estado</span></td>
+                        <td class="acciones-tabla">
+                            @if (CitaService.PuedeModificarse(cita, ahora))
+                            {
+                                <a class="volver" asp-controller="Citas" asp-action="Editar" asp-route-id="@cita.Id">Modificar</a>
+
+                                <form asp-controller="Citas" asp-action="Cancelar" asp-route-id="@cita.Id" method="post"
+                                      onsubmit="return confirm('¿Seguro que quieres cancelar esta cita?');">
+                                    <button type="submit" class="btn-peligro">Cancelar</button>
+                                </form>
+                            }
+                            else
+                            {
+                                <a class="volver" asp-controller="Citas" asp-action="Confirmacion" asp-route-id="@cita.Id">Ver resumen</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

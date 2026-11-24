@@ -1,0 +1,138 @@
+@model RegistrarCitaViewModel
+@{
+    var hoy = DateTime.Now.ToString("yyyy-MM-dd");
+    var accion = ViewData["Accion"] as string ?? "Registrar";
+}
+<form asp-controller="Citas" asp-action="@accion" asp-route-id="@Model.Id" method="post" class="form-cita" novalidate>
+
+    <div asp-validation-summary="ModelOnly" class="error"></div>
+
+    <div class="campo">
+        <label asp-for="ProfesionalId">Profesional</label>
+        <select asp-for="ProfesionalId" id="profesional">
+            <option value="">Selecciona un profesional</option>
+            @foreach (var p in Model.Profesionales)
+            {
+                <option value="@p.Id" selected="@(Model.ProfesionalId == p.Id)">
+                    @p.Nombre@(string.IsNullOrWhiteSpace(p.Especialidad) ? "" : " — " + p.Especialidad)
+                </option>
+            }
+        </select>
+        <span asp-validation-for="ProfesionalId" class="error"></span>
+    </div>
+
+    <div class="campo">
+        <label asp-for="ServicioId">Servicio</label>
+        <select asp-for="ServicioId" id="servicio">
+            <option value="">Selecciona un servicio</option>
+            @foreach (var s in Model.Servicios)
+            {
+                <option value="@s.Id"
+                        data-precio="@Identidad.FormatearPrecio(s.Precio)"
+                        data-duracion="@s.DuracionMinutos"
+                        selected="@(Model.ServicioId == s.Id)">
+                    @s.Nombre — @Identidad.FormatearPrecio(s.Precio)
+                </option>
+            }
+        </select>
+        <span asp-validation-for="ServicioId" class="error"></span>
+        <p class="detalle" id="detalle-servicio" hidden></p>
+    </div>
+
+    <div class="campo">
+        <label for="Fecha">Fecha</label>
+        <input type="date" id="Fecha" name="Fecha" min="@hoy"
+               value="@Model.Fecha?.ToString("yyyy-MM-dd")" />
+        <span asp-validation-for="Fecha" class="error"></span>
+        <p class="ayuda">Lunes a viernes de 9:00 a. m. a 7:00 p. m. Sábados de 9:00 a. m. a 6:00 p. m. Domingos cerrado.</p>
+    </div>
+
+    <fieldset class="campo">
+        <legend>Hora</legend>
+        <p class="ayuda" id="ayuda-horas">Elige profesional, servicio y fecha para ver las horas libres.</p>
+        <div class="horas">
+            @foreach (var h in Model.Horas)
+            {
+                var valor = h.ToString("HH:mm");
+                <label class="hora">
+                    <input type="radio" name="Hora" value="@valor" data-hora="@valor"
+                           checked="@(Model.Hora == h)" />
+                    <span>@h.ToString("h:mm tt", new System.Globalization.CultureInfo("es-CO"))</span>
+                </label>
+            }
+        </div>
+        <span asp-validation-for="Hora" class="error"></span>
+    </fieldset>
+
+    <div class="campo">
+        <label asp-for="Observaciones">Observaciones <small>(opcional)</small></label>
+        <textarea asp-for="Observaciones" rows="3" maxlength="500"
+                  placeholder="Ej.: degradado bajo, traer foto de referencia…"></textarea>
+        <span asp-validation-for="Observaciones" class="error"></span>
+    </div>
+
+    <div class="acciones">
+        <button type="submit" class="reserva">@(Model.EsModificacion ? "Guardar cambios" : "Solicitar cita")</button>
+        <a class="volver" asp-controller="Citas" asp-action="Mis">← Volver a mis citas</a>
+    </div>
+</form>
+
+<script>
+    (function () {
+        const selProfesional = document.getElementById("profesional");
+        const selServicio = document.getElementById("servicio");
+        const inputFecha = document.getElementById("Fecha");
+        const detalle = document.getElementById("detalle-servicio");
+        const ayuda = document.getElementById("ayuda-horas");
+        const radios = document.querySelectorAll("input[name='Hora']");
+        const urlHoras = "@Url.Action("HorasLibres", "Citas")";
+        const citaId = "@Model.Id";
+
+        function mostrarDetalle() {
+            const opcion = selServicio.selectedOptions[0];
+            if (!opcion || !opcion.value) {
+                detalle.hidden = true;
+                return;
+            }
+            detalle.textContent = `Precio: ${opcion.dataset.precio} · Duración: ${opcion.dataset.duracion} min`;
+            detalle.hidden = false;
+        }
+
+        async function actualizarHoras() {
+            if (!selProfesional.value || !selServicio.value || !inputFecha.value) {
+                radios.forEach(r => { r.disabled = false; r.parentElement.hidden = false; });
+                ayuda.textContent = "Elige profesional, servicio y fecha para ver las horas libres.";
+                return;
+            }
+
+            const params = new URLSearchParams({
+                profesionalId: selProfesional.value,
+                servicioId: selServicio.value,
+                fecha: inputFecha.value
+            });
+            if (citaId) params.set("citaId", citaId);
+
+            const respuesta = await fetch(`${urlHoras}?${params}`);
+            if (!respuesta.ok) return;
+            const libres = await respuesta.json();
+
+            radios.forEach(r => {
+                const libre = libres.includes(r.dataset.hora);
+                r.disabled = !libre;
+                r.parentElement.hidden = !libre;
+                if (!libre && r.checked) r.checked = false;
+            });
+
+            ayuda.textContent = libres.length
+                ? "Solo se muestran las horas libres."
+                : "No hay horas libres para ese día. Prueba con otra fecha o profesional.";
+        }
+
+        selServicio.addEventListener("change", () => { mostrarDetalle(); actualizarHoras(); });
+        selProfesional.addEventListener("change", actualizarHoras);
+        inputFecha.addEventListener("change", actualizarHoras);
+
+        mostrarDetalle();
+        actualizarHoras();
+    })();
+</script>

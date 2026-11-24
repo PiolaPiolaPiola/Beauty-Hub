@@ -1,0 +1,9 @@
+@model RegistrarCitaViewModel
+@{
+    Layout = "_PaginaCita";
+    ViewData["Titulo"] = "Modificar cita";
+    ViewData["Subtitulo"] = "Cambia el profesional, el servicio, el día o la hora.";
+    ViewData["Accion"] = "Editar";
+}
+
+<partial name="_FormCita" model="Model" />

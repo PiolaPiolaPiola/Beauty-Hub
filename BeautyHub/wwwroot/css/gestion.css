@@ -1,0 +1,154 @@
+.cita-ancha {
+    max-width: 960px;
+}
+
+.aviso-error {
+    display: grid;
+    gap: .2rem;
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+    background: #fbe9e4;
+    color: #8a2e17;
+    border: 1px solid #e7b9aa;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.resumen-lista {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: .6rem 1.2rem;
+    margin: 0 0 1.5rem;
+}
+
+    .resumen-lista dt {
+        font-weight: 600;
+        color: var(--verde);
+    }
+
+    .resumen-lista dd {
+        margin: 0;
+        color: var(--carbon);
+    }
+
+.resumen h2,
+.perfil h2,
+.agenda-cabecera h2 {
+    font-family: var(--serif);
+    color: var(--verde);
+}
+
+.estado {
+    display: inline-block;
+    padding: .2rem .6rem;
+    border-radius: 999px;
+    font-size: .85rem;
+    font-weight: 600;
+    background: var(--arena);
+    color: var(--carbon);
+}
+
+.estado-solicitada { background: #f3e6b8; }
+.estado-confirmada { background: #cfe7d6; color: #184d2a; }
+.estado-cancelada  { background: #e9e4e4; color: #6b6262; text-decoration: line-through; }
+.estado-atendida   { background: #d6dcf3; color: #223a7a; }
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+.tabla-citas {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .95rem;
+}
+
+    .tabla-citas th,
+    .tabla-citas td {
+        padding: .7rem .6rem;
+        text-align: left;
+        vertical-align: middle;
+        border-bottom: 1px solid #e6dccb;
+    }
+
+    .tabla-citas th {
+        font-weight: 600;
+        color: var(--verde);
+    }
+
+.acciones-tabla {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    align-items: center;
+}
+
+    .acciones-tabla form {
+        margin: 0;
+    }
+
+.reserva-pequena,
+.btn-peligro {
+    font: inherit;
+    font-size: .85rem;
+    font-weight: 600;
+    padding: .35rem .75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid var(--verde);
+    background: var(--verde);
+    color: #fff;
+}
+
+.btn-peligro {
+    border-color: var(--terracota);
+    background: var(--terracota);
+}
+
+.reserva-pequena:hover,
+.btn-peligro:hover {
+    filter: brightness(1.08);
+}
+
+.agenda-cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.selector-dia {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    align-items: center;
+}
+
+    .selector-dia input[type="date"] {
+        font: inherit;
+        padding: .45rem .7rem;
+        border: 2px solid var(--carbon);
+        border-radius: 10px;
+    }
+
+.tipos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.volver-cuenta {
+    text-align: center;
+}
+
+    .volver-cuenta a {
+        color: var(--terracota);
+        font-weight: 600;
+    }

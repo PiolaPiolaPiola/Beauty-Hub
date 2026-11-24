@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewData["Titulo"] - Beauty Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/cita.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/gestion.css" asp-append-version="true" />
+</head>
+<body>
+
+    <header>
+        <div class="wrap">
+            <h1>@ViewData["Titulo"]</h1>
+            @if (ViewData["Subtitulo"] is string subtitulo)
+            {
+                <p>@subtitulo</p>
+            }
+        </div>
+        <div class="franja wrap" aria-hidden="true" style="max-width:none">
+            <span style="background:var(--verde)"></span>
+            <span style="background:var(--bronce)"></span>
+            <span style="background:var(--terracota)"></span>
+            <span style="background:var(--arena)"></span>
+            <span style="background:var(--rosa)"></span>
+        </div>
+    </header>
+
+    <nav class="filtros" aria-label="Navegación">
+        <div class="wrap">
+            <a class="btn-login" asp-controller="Home" asp-action="Index">← Servicios</a>
+            <div class="sesion">
+                @await Html.PartialAsync("_NavSesion")
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="peluqueria">
+            <div class="wrap cita @ViewData["ClaseContenedor"]">
+                @if (TempData["Mensaje"] is string mensaje)
+                {
+                    <div class="aviso-ok" role="status"><strong>@mensaje</strong></div>
+                }
+                @if (TempData["Error"] is string error)
+                {
+                    <div class="aviso-error" role="alert"><strong>@error</strong></div>
+                }
+
+                @RenderBody()
+            </div>
+        </section>
+    </main>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

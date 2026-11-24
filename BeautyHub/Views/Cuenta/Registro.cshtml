@@ -1,0 +1,88 @@
+@model RegistroViewModel
+@{
+    Layout = "_PaginaCita";
+    ViewData["Titulo"] = "Crear cuenta";
+    ViewData["Subtitulo"] = "Regístrate como cliente para reservar, o como profesional para gestionar tu agenda.";
+}
+
+<form asp-controller="Cuenta" asp-action="Registro" method="post" class="form-cita" novalidate>
+
+    <div asp-validation-summary="ModelOnly" class="error"></div>
+
+    <fieldset class="campo">
+        <legend>Tipo de cuenta</legend>
+        <div class="horas tipos">
+            <label class="hora"><input type="radio" asp-for="Tipo" value="Cliente" /><span>Cliente</span></label>
+            <label class="hora"><input type="radio" asp-for="Tipo" value="Profesional" /><span>Profesional</span></label>
+        </div>
+        <span asp-validation-for="Tipo" class="error"></span>
+    </fieldset>
+
+    <div class="campo">
+        <label asp-for="Nombres"></label>
+        <input asp-for="Nombres" />
+        <span asp-validation-for="Nombres" class="error"></span>
+    </div>
+
+    <div class="campo">
+        <label asp-for="Apellidos"></label>
+        <input asp-for="Apellidos" />
+        <span asp-validation-for="Apellidos" class="error"></span>
+    </div>
+
+    <div class="campo">
+        <label asp-for="Telefono"></label>
+        <input asp-for="Telefono" type="tel" />
+        <span asp-validation-for="Telefono" class="error"></span>
+    </div>
+
+    <div class="campo">
+        <label asp-for="Correo">Correo <small>(opcional)</small></label>
+        <input asp-for="Correo" type="email" />
+        <span asp-validation-for="Correo" class="error"></span>
+    </div>
+
+    <div class="campo" id="campo-especialidad">
+        <label asp-for="Especialidad">Especialidad <small>(profesionales)</small></label>
+        <input asp-for="Especialidad" placeholder="Ej.: Barbería, color, keratina" />
+        <span asp-validation-for="Especialidad" class="error"></span>
+    </div>
+
+    <div class="campo">
+        <label asp-for="Usuario"></label>
+        <input asp-for="Usuario" autocomplete="username" />
+        <span asp-validation-for="Usuario" class="error"></span>
+    </div>
+
+    <div class="campo">
+        <label asp-for="Contrasena"></label>
+        <input asp-for="Contrasena" type="password" autocomplete="new-password" />
+        <span asp-validation-for="Contrasena" class="error"></span>
+    </div>
+
+    <div class="campo">
+        <label asp-for="ConfirmarContrasena"></label>
+        <input asp-for="ConfirmarContrasena" type="password" autocomplete="new-password" />
+        <span asp-validation-for="ConfirmarContrasena" class="error"></span>
+    </div>
+
+    <div class="acciones">
+        <button type="submit" class="reserva">Crear cuenta</button>
+        <a class="volver" asp-controller="Home" asp-action="Login">Ya tengo cuenta</a>
+    </div>
+</form>
+
+<script>
+    (function () {
+        const radios = document.querySelectorAll("input[name='Tipo']");
+        const campoEspecialidad = document.getElementById("campo-especialidad");
+
+        function actualizar() {
+            const profesional = document.querySelector("input[name='Tipo']:checked")?.value === "Profesional";
+            campoEspecialidad.hidden = !profesional;
+        }
+
+        radios.forEach(r => r.addEventListener("change", actualizar));
+        actualizar();
+    })();
+</script>

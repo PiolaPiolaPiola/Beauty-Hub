@@ -1,0 +1,326 @@
+﻿:root {
+    --verde: #1a362e;
+    --bronce: #c29b38;
+    --terracota: #b35e28;
+    --arena: #eae2d5;
+    --carbon: #242424;
+    --rosa: #d4a396;
+    --arena-claro: #f1e8d6;
+    --serif: "Fraunces", Georgia, serif;
+    --sans: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--sans);
+    background: var(--arena);
+    color: var(--carbon);
+    line-height: 1.55;
+}
+
+a, button {
+    font: inherit;
+}
+
+:focus-visible {
+    outline: 3px solid var(--terracota);
+    outline-offset: 3px;
+}
+
+/* Encabezado */
+header {
+    background: var(--carbon);
+    color: var(--arena);
+    padding: 4rem 1.5rem 0;
+}
+
+.wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(2.4rem, 7vw, 4.6rem);
+    line-height: 1.05;
+    max-width: 14ch;
+}
+
+header p {
+    margin-top: 1.2rem;
+    max-width: 52ch;
+    color: #cfc3ab;
+}
+
+.franja {
+    display: flex;
+    height: 10px;
+    margin-top: 3rem;
+}
+
+    .franja span {
+        flex: 1;
+    }
+
+/* Filtros */
+.filtros {
+    background: var(--arena);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    border-bottom: 2px solid var(--carbon);
+}
+
+    .filtros .wrap {
+        display: flex;
+        gap: .5rem;
+        padding: .8rem 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .filtros button {
+        border: 2px solid var(--carbon);
+        background: transparent;
+        color: var(--carbon);
+        padding: .45rem 1.1rem;
+        border-radius: 999px;
+        cursor: pointer;
+        font-weight: 600;
+    }
+
+        .filtros button[aria-pressed="true"] {
+            background: var(--verde);
+            border-color: var(--verde);
+            color: var(--arena);
+        }
+
+/* Secciones de servicios */
+main section {
+    padding: 3.5rem 1.5rem;
+}
+
+.barberia {
+    background: var(--verde);
+    color: var(--arena);
+}
+
+.peluqueria {
+    background: var(--arena-claro);
+}
+
+.combos {
+    background: var(--terracota);
+    color: #fff8ee;
+}
+
+.cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+    line-height: 1.1;
+}
+
+.barberia h2 {
+    color: var(--arena);
+}
+
+.peluqueria h2 {
+    color: var(--verde);
+}
+
+.nota {
+    max-width: 40ch;
+    font-size: .95rem;
+    opacity: .85;
+}
+
+.lista {
+    list-style: none;
+}
+
+.servicio {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: .2rem 1rem;
+    padding: 1.1rem 0;
+    border-top: 1px solid currentColor;
+    border-top-color: rgba(128,128,128,.45);
+}
+
+    .servicio h3 {
+        font-family: var(--serif);
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+.precio {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+.barberia .precio {
+    color: #d9a566;
+}
+
+.peluqueria .precio {
+    color: var(--terracota);
+}
+
+.combos .precio {
+    color: #fff8ee;
+}
+
+.servicio p {
+    grid-column: 1;
+    font-size: .95rem;
+    opacity: .85;
+    max-width: 60ch;
+}
+
+.duracion {
+    grid-column: 2;
+    text-align: right;
+    font-size: .85rem;
+    opacity: .75;
+    align-self: start;
+}
+
+/* Dos columnas en pantallas anchas */
+@media (min-width: 800px) {
+    .lista.dos {
+        columns: 2;
+        column-gap: 3.5rem;
+    }
+
+        .lista.dos .servicio {
+            break-inside: avoid;
+        }
+}
+
+.etiqueta {
+    display: inline-block;
+    background: var(--rosa);
+    color: var(--carbon);
+    font-size: .75rem;
+    font-weight: 600;
+    padding: .1rem .6rem;
+    border-radius: 999px;
+    margin-left: .5rem;
+    vertical-align: middle;
+}
+
+.oculto {
+    display: none;
+}
+
+/* Pie */
+footer {
+    background: var(--carbon);
+    color: var(--arena);
+    padding: 3rem 1.5rem;
+}
+
+    footer .wrap {
+        display: grid;
+        gap: 2rem;
+    }
+
+@media (min-width: 800px) {
+    footer .wrap {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+footer h2 {
+    font-size: 1.5rem;
+    color: #d9a566;
+    margin-bottom: .6rem;
+}
+
+footer dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .3rem 1.5rem;
+}
+
+footer dt {
+    font-weight: 600;
+}
+
+.reserva {
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--rosa);
+    color: var(--carbon);
+    font-weight: 600;
+    text-decoration: none;
+    padding: .7rem 1.4rem;
+    border-radius: 999px;
+}
+
+    .reserva:hover {
+        background: var(--arena);
+    }
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Zona de sesión: se empuja a la derecha de la barra */
+.filtros .sesion {
+    margin-left: auto;
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+    .filtros .sesion form {
+        display: contents;
+    }
+
+.filtros .btn-login {
+    border: 2px solid var(--verde);
+    background: var(--verde);
+    color: var(--arena);
+    padding: .45rem 1.1rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+    .filtros .btn-login:hover {
+        background: var(--terracota);
+        border-color: var(--terracota);
+    }
+/* Cerrar sesión: botón de contorno para diferenciarlo de la acción principal */
+.filtros .btn-salir {
+    border-color: var(--terracota);
+    color: var(--terracota);
+}
+
+    .filtros .btn-salir:hover {
+        background: var(--terracota);
+        color: var(--arena);
+    }
